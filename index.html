@@ -41,7 +41,7 @@
         width: 80%;
       }
       
-      a{
+      a, button{
         color: white;
         background: blue;
         font-weight: bolder;
@@ -49,6 +49,7 @@
         border-radius: 10px;
         text-decoration : none;
         padding: 8px 15px;
+        border: none;
       }
     </style>
   </head>
@@ -58,20 +59,31 @@
           <div>
             <h3>One Time Ad</h5>
             <h1>SGD$40</h1> 
-            <a href="./done.html" />Start </a>
+            <button/>Start</button>
           </div>
           <div>
             <h3>Monthly Subscription</h5>
             <h1>SGD$100</h1>    
-            <a href="./done.html" />Start </a>
+            <button/>Start</button>
           </div>
           <div>
             <h3>Annual Subscription</h5>
             <h1>SGD$960</h1>     
-            <a href="./done.html" />Start</a>
+            <button/>Start</button>
           </div>
        </div>
 <!--      </form> -->
     <script src="https://telegram.org/js/telegram-web-app.js"></script>
+
+<script>
+  btns =  document.querySelectorAll("button")   
+  var i = 0;
+  for (i=0; i<btns.length; i++){
+    btns[i].addEventListener('click', ()=>{
+      alert("Payment successfull close this window and continue ... ")
+    })
+  }
+  
+</script>
   </body>
 </html>
